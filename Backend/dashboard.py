@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # --- CONFIGURATION ---
 CRED_PATH = "key.json" 
-COLLECTION_NAME = "shipments" # The collection we listen to
+COLLECTION_NAME = "shipments"
 
 # --- FIRESTORE CONNECTION ---
 db = None
