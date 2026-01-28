@@ -1,8 +1,8 @@
 🛡️ Trust-Tag: Hardware-Secured Logistics Integrity System
 
-Theme: Sustainable Development / Smart Logistics
+Theme: Sustainable Development
 
-Team: Vision Synapse
+Team: Vision.exe
 
 ⚡ The Concept
 
