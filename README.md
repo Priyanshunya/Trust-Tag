@@ -35,8 +35,5 @@ Database: Firebase Firestore (NoSQL)
 
 🚀 How to Run (Local Demo Mode)
 
-Hardware: Connect the Voltage Divider circuit as per the Pinout table.
-
-Flash: Upload firmware/scanner.ino to ESP32.
-
-Run Server
+Hardware: connect Prototype scanner(scanner.ino) with wifi and scan package
+data uploaded to cloud > signature accessed > status secured
