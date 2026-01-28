@@ -23,61 +23,6 @@ Validation: Cloud Logic compares the live signature against the "Origin Signatur
 
 Intelligence: Vertex AI filters out noise (temperature drift) from active tampering.
 
-🔌 Hardware Pinout (Wiring)
-
-Component
-
-ESP32 Pin
-
-Function
-
-OLED SDA
-
-GPIO 21
-
-Display Data
-
-OLED SCL
-
-GPIO 22
-
-Display Clock
-
-Sensor Probe A
-
-3.3V
-
-Voltage Source
-
-Sensor Probe B
-
-GPIO 34
-
-Analog Input (ADC1_CH6)
-
-BTN_UP
-
-GPIO 12
-
-Navigation
-
-BTN_DOWN
-
-GPIO 27
-
-Navigation
-
-BTN_OK
-
-GPIO 13
-
-Select / Scan
-
-BTN_BACK
-
-GPIO 14
-
-Reset
 
 🛠️ Tech Stack
 
