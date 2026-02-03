@@ -45,7 +45,7 @@ Backend: Python (Flask / Google Cloud Functions)
 Database: Firebase Firestore (NoSQL)
 
 
-🚀 How to Run (Local Demo Mode)
+🚀 Local Demo Mode
 
 Hardware: connect Prototype scanner(scanner.ino) with wifi and scan package
 data uploaded to cloud > signature accessed > status secured
