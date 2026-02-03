@@ -30,7 +30,7 @@ Intelligence: Vertex AI filters out noise (temperature drift) from active tamper
 | **OLED SDA** | GPIO 21 | Display Data |
 | **OLED SCL** | GPIO 22 | Display Clock |
 | **Sensor Probe A** | 3.3V | Voltage Source |
-| **Sensor Probe B** | GPIO 34 | Analog Input (ADC1_CH6) |
+| **Sensor Probe B** | GPIO 34 | Analog Input |
 | **BTN_UP** | GPIO 12 | Navigation (Up) |
 | **BTN_DOWN** | GPIO 27 | Navigation (Down) |
 | **BTN_OK** | GPIO 13 | Select / Scan |
