@@ -5,7 +5,6 @@
 #include <HTTPClient.h>
 
 // --- DISPLAY ---
-// Using SH1106G as per your hardware selection
 Adafruit_SH1106G display = Adafruit_SH1106G(128, 64, &Wire, -1);
 
 // --- PINS ---
