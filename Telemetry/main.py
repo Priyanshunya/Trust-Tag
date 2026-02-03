@@ -4,7 +4,6 @@ from datetime import datetime
 import json
 import traceback
 
-# --- INITIALIZE ONCE (GLOBAL SCOPE) ---
 # This prevents memory leaks and startup crashes
 try:
     db = firestore.Client()
@@ -13,7 +12,6 @@ except Exception as e:
     print(f"❌ Firestore Init Error: {e}")
     db = None
 
-# This must match your Dashboard COLLECTION name exactly
 COLLECTION = 'scan_logs'
 
 @functions_framework.http
@@ -29,11 +27,11 @@ def ingest(request):
             print("⚠️ No JSON payload received")
             return (json.dumps({"status": "NO_PAYLOAD"}), 200, {'Content-Type': 'application/json'})
         
-        # 2. Extract Data & Force Types (This prevents the 500 Math Crash)
-        # pid is the tracking ID (e.g., PACK_001)
+        # 2. Extract Data & Force Types
+        # pid is the tracking ID
         pid = str(data.get('id', 'UNKNOWN'))
         
-        # Convert resistance to integer safely
+       
         try:
             res_val = data.get('res', 0)
             res = int(float(res_val)) 
@@ -86,7 +84,7 @@ def ingest(request):
             else:
                 server_verdict = "SECURE"
             
-            # Update Document using the most stable array union method
+            
             doc_ref.update({
                 "current_res": res,
                 "status": server_verdict,
@@ -103,8 +101,7 @@ def ingest(request):
         return (response_body, 200, {'Content-Type': 'application/json'})
 
     except Exception as e:
-        # CATCH-ALL: This returns a 200 OK so the ESP32 doesn't see a 500 crash
-        # The specific error details will appear in your GCP Logs tab
+        
         print(f"🔥 SERVER ERROR: {str(e)}")
         print(traceback.format_exc())
         
