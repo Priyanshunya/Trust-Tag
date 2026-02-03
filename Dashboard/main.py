@@ -4,7 +4,7 @@ from firebase_admin import credentials, firestore
 import os
 from datetime import datetime
 
-# Initialize Firebase (GCP Default Credentials)
+# Initialize Firebase 
 if not firebase_admin._apps:
     firebase_admin.initialize_app()
 
@@ -13,7 +13,7 @@ COLLECTION = 'scan_logs'
 
 app = Flask(__name__)
 
-# Cyberpunk-Industrial UI Template
+
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
